@@ -1,3 +1,5 @@
+require 'byebug'
+
 class UsersController < ApplicationController
 
     def new
@@ -6,11 +8,13 @@ class UsersController < ApplicationController
     end
 
     def create
+        debugger
+        
         @user = User.new(user_params)
-
         if @user
+            debugger
             login!(@user)
-            redirect_to users_url
+            redirect_to user_url(@user)
         else
             flash.now[:errors] = @users.error.full_messages
             render :new
