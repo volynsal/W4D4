@@ -1,4 +1,4 @@
-class UsersContoller < ApplicationController
+class UsersController < ApplicationController
 
     def new
         @user = User.new
@@ -14,9 +14,8 @@ class UsersContoller < ApplicationController
         else
             flash.now[:errors] = @users.error.full_messages
             render :new
+        end
     end
-
-    
 
     def show
         render :show
