@@ -1,0 +1,13 @@
+<h1 name="page header">New Band</h1>
+
+<a class='button' href=<%new_session_url%>>Go to sign-in </a>
+
+<form class="for" action="<% bands_url %>" method="POST">
+
+<p>
+    <label for="new-band-name">Name</label>
+    <input id="new-band-name" type="text" name="band[name]">
+</p>
+
+<input type="submit" value="Submit">
+

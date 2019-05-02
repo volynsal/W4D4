@@ -1,0 +1,6 @@
+<h1>Show Page</h1>
+<p><%= band.name %></p>
+
+<form method="POST" action="<%band_url(@user)%>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" value="Delete band">
